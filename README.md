@@ -39,7 +39,7 @@ Each lab is explained with clear objectives, pre-lab reading material, tasks, an
 
 1. Clone or download the repository using the following command:
    ```bash
-   git clone https://github.com/your-repository-link.git
+   git clone https://github.com/engbakhtmuhammad/MAD-LABS.git
 2. Navigate to the respective lab folder and follow the instructions in the lab manual.
 3. If you find this repository helpful, don’t forget to star it!
 
