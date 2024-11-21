@@ -1,5 +1,6 @@
 import 'package:mad/Lab 05/explicit.dart';
 import 'package:flutter/material.dart';
+import 'package:mad/Lab%2006/navigation.dart';
 import 'package:mad/Lab%2007/api.dart';
 import 'package:mad/Lab%2007/future.dart';
 import 'package:mad/Lab%2007/stream.dart';
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: StreamFetchScreen(),
+      home: NavigationScreen(),
       // home: ImplicitAnimationApp(),
       // home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
