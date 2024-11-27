@@ -1,8 +1,6 @@
-import 'package:mad/Lab 05/explicit.dart';
+
 import 'package:flutter/material.dart';
-import 'package:mad/Lab%2006/navigation.dart';
-import 'package:mad/Lab%2007/api.dart';
-import 'package:mad/Lab%2007/future.dart';
+import 'package:get/get.dart';
 import 'package:mad/Lab%2007/stream.dart';
 
 void main() {
@@ -15,13 +13,19 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    //  return ChangeNotifierProvider(  // Wrap the app with ChangeNotifierProvider
+    //   create: (context) => CounterModel(),
+    //   child: MaterialApp(
+    //     home: CounterScreen(),
+    //   ),
+    // );
+    return GetMaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: NavigationScreen(),
+      home: StreamFetchScreen(),
       // home: ImplicitAnimationApp(),
       // home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );

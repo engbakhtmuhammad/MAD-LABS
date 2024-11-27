@@ -14,9 +14,9 @@ class FutureFetchScreen extends StatelessWidget {
   }
 
   Future<String> simulateDelay() async {
-    print("Starting task...");
+    print(">>>>>>>>>>>>>>>>>>>>>Starting task...");
     await Future.delayed(Duration(seconds: 3));
-    print("Task completed after delay!");
+    print(">>>>>>>>>>>>>>>>>>>>>>Task completed after delay!");
     return "Task completed after delay!";
   }
 

@@ -10,7 +10,8 @@ class ApiFetchScreen extends StatefulWidget {
 class _ApiFetchScreenState extends State<ApiFetchScreen> {
   String data = "Fetching...";
 
-  void fetchData() async {
+ fetchData()  async {
+    
     final response = await http.get(Uri.parse("https://jsonplaceholder.typicode.com/posts/1"));
     setState(() {
       data = json.decode(response.body)['title'];
