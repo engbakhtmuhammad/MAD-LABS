@@ -16,18 +16,24 @@ class PostController extends GetxController {
 
   /// Fetch posts from Firestore
   Future<void> fetchPosts() async {
-    final snapshot = await _firestore.collection('posts').get();
-    posts.value = snapshot.docs.map((doc) {
-      final data = doc.data();
-      return Post.fromJson({...data, 'id': doc.id});
-    }).toList();
+    try {
+      final snapshot = await _firestore.collection('posts').get();
+      posts.value = snapshot.docs.map((doc) {
+        final data = doc.data();
+        return Post.fromJson({...data, 'id': doc.id});
+      }).toList();
+    } catch (e) {
+      Get.snackbar("Error", "Failed to fetch posts: ${e}");
+    }
   }
 
   /// Add a new post with image
   Future<void> addPost(String title, String description, File imageFile) async {
     try {
       // Upload image to Firebase Storage
-      final storageRef = _firebaseStorage.ref().child('post_images/${DateTime.now().millisecondsSinceEpoch}');
+      final storageRef = _firebaseStorage
+          .ref()
+          .child('post_images/${DateTime.now().millisecondsSinceEpoch}');
       final uploadTask = await storageRef.putFile(imageFile);
       final imageUrl = await uploadTask.ref.getDownloadURL();
 
@@ -51,13 +57,16 @@ class PostController extends GetxController {
   }
 
   /// Update an existing post
-  Future<void> updatePost(String docId, String title, String description, File? imageFile) async {
+  Future<void> updatePost(
+      String docId, String title, String description, File? imageFile) async {
     try {
       String? imageUrl;
 
       // If a new image is provided, upload to Firebase Storage
       if (imageFile != null) {
-        final storageRef = _firebaseStorage.ref().child('post_images/${DateTime.now().millisecondsSinceEpoch}');
+        final storageRef = _firebaseStorage
+            .ref()
+            .child('post_images/${DateTime.now().millisecondsSinceEpoch}');
         final uploadTask = await storageRef.putFile(imageFile);
         imageUrl = await uploadTask.ref.getDownloadURL();
       }
@@ -111,7 +120,8 @@ class PostController extends GetxController {
 
       // Write bytes to a file (update path for the app's storage directory)
       final directory = await getExternalStorageDirectory();
-      final filePath = "${directory!.path}/${DateTime.now().millisecondsSinceEpoch}.png";
+      final filePath =
+          "${directory!.path}/${DateTime.now().millisecondsSinceEpoch}.png";
       final file = File(filePath);
       await file.writeAsBytes(response!);
 
