@@ -48,4 +48,14 @@ class ApiService {
       throw Exception('Failed to delete post');
     }
   }
+  Future<List<Map<String, dynamic>>> fetchUsers() async {
+  final response = await http.get(Uri.parse('$baseUrl/users'));
+  if (response.statusCode == 200) {
+    final List<dynamic> data = json.decode(response.body);
+    return List<Map<String, dynamic>>.from(data);
+  } else {
+    throw Exception('Failed to load users');
+  }
+}
+
 }
