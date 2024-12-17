@@ -54,10 +54,10 @@ Students are required to develop a complete mobile application using Flutter by 
   - Integration of external packages and services
 
 ### Design Tools and Mockups
-Use **Photopea** and the provided template files to create mockups for your project. Mockups should include:
+Use <a href="https://www.photopea.com">**Photopea**</a> and the provided template files to create mockups for your project. Mockups should include:
 
 1. A screenshot of the app’s UI designed in the mockup template.
-2. A brief explanation of your app’s design and flow.
+2. A brief explanation of your app’s design and flow if possible.
 
 ### Video Demo
 Create a **video demonstration** of your app, showcasing all its features and functionality.
