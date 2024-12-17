@@ -30,9 +30,9 @@ Here’s a quick overview of what you’ll find in this repository:
 5. **Lab 5**: Building complex layouts with Flutter.
 6. **Lab 6**: Adding animations and transitions to Flutter applications.
 7. **Lab 7**: Understanding asynchronous programming and using FutureBuilder & StreamBuilder.
-8. **Lab 8**: Working with Firebase for backend integration.
-9. **Lab 9**: Creating REST API integrations in Flutter.
-10. **Lab 10**: Deploying Flutter apps and optimizing performance.
+8. **Lab 8**: Building Applications with State Management.
+9. **Lab 9**: Building Applications that Require CRUD Tasks and Communication with the Internet
+10. **Lab 10**: Adding Support for Remote Storage and Databases Using Firebase
 
 Each lab is explained with clear objectives, pre-lab reading material, tasks, and code examples.
 
@@ -83,17 +83,17 @@ Follow these steps to submit your project:
 
 3. **Submission**:
    - Share the link to your GitHub repository.
-   - Email the link to the instructor or submit it on the designated course platform.
 
 ### Example Mockup
 Here’s an example of how your mockup should look:
 
-![Mockup Screenshot](mockup.png)
+![glamourme app](https://github.com/user-attachments/assets/e5b61205-fb85-4971-9b93-10c017a24468)
 
 ### Example Video Demo
 Here’s an example of how to embed your video:
 
-[![Watch the video](https://img.youtube.com/vi/your_video_id/0.jpg)](https://www.youtube.com/watch?v=your_video_id)
+https://github.com/user-attachments/assets/c8a94537-6863-4be5-85a8-b25fc569bced
+
 
 ---
 
