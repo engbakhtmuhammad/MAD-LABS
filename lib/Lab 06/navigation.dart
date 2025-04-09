@@ -3,18 +3,14 @@ import 'package:flutter/material.dart';
 import 'package:mad/utils/constants.dart';
 
 class NavigationScreen extends StatefulWidget {
-
   const NavigationScreen({
-     super.key,
+    super.key,
   });
   @override
-  createState() => _NavigationScreenState(
-    
-      );
+  createState() => _NavigationScreenState();
 }
 
 class _NavigationScreenState extends State<NavigationScreen> {
-
   late PageController _pageController;
   int pageIndex = 0;
 
@@ -66,7 +62,8 @@ class _NavigationScreenState extends State<NavigationScreen> {
               topRight: Radius.circular(20), topLeft: Radius.circular(20)),
         ),
         child: Padding(
-          padding:  EdgeInsets.symmetric(horizontal: containerRoundCorner, vertical: 10),
+          padding: EdgeInsets.symmetric(
+              horizontal: containerRoundCorner, vertical: 10),
           child: CupertinoTabBar(
               border: Border(top: BorderSide(color: blackColor)),
               backgroundColor: blackColor,
@@ -75,10 +72,38 @@ class _NavigationScreenState extends State<NavigationScreen> {
               activeColor: primaryColor,
               // inactiveColor: Colors.grey,
               items: [
-                BottomNavigationBarItem(icon: Image.asset('assets/icons/home.png',width: 24,height: 24,color: pageIndex==0?primaryColor:Colors.grey,),label: 'Home'),
-                BottomNavigationBarItem(icon: Image.asset('assets/icons/map.png',width: 24,height: 24,color: pageIndex==1?primaryColor:Colors.grey,),label: 'Map'),
-                BottomNavigationBarItem(icon: Image.asset('assets/icons/chat.png',width: 24,height: 24,color: pageIndex==2?primaryColor:Colors.grey,),label: 'Chat'),
-                BottomNavigationBarItem(icon: Image.asset('assets/icons/profile.png',width: 24,height: 24,color: pageIndex==3?primaryColor:Colors.grey,),label: 'Profile'),
+                BottomNavigationBarItem(
+                    icon: Image.asset(
+                      'assets/icons/home.png',
+                      width: 24,
+                      height: 24,
+                      color: pageIndex == 0 ? primaryColor : Colors.grey,
+                    ),
+                    label: 'Home'),
+                BottomNavigationBarItem(
+                    icon: Image.asset(
+                      'assets/icons/map.png',
+                      width: 24,
+                      height: 24,
+                      color: pageIndex == 1 ? primaryColor : Colors.grey,
+                    ),
+                    label: 'Map'),
+                BottomNavigationBarItem(
+                    icon: Image.asset(
+                      'assets/icons/chat.png',
+                      width: 24,
+                      height: 24,
+                      color: pageIndex == 2 ? primaryColor : Colors.grey,
+                    ),
+                    label: 'Chat'),
+                BottomNavigationBarItem(
+                    icon: Image.asset(
+                      'assets/icons/profile.png',
+                      width: 24,
+                      height: 24,
+                      color: pageIndex == 3 ? primaryColor : Colors.grey,
+                    ),
+                    label: 'Profile'),
               ]),
         ),
       ),
